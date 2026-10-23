@@ -228,7 +228,7 @@ td.g.drop-on{box-shadow:inset 0 0 0 3px var(--pri);background:var(--pri-soft)}
     <div class="guide"><b class="gh">[사용방법]</b><ol>
       <li>해당 업무를 누르면 AI비서와 업무도움자료 링크가 열립니다.</li>
       <li>업무는 직접 클릭하여 연결하거나 삭제할 수 있습니다.</li>
-      <li>수정 후 하단에 '저장' 버튼을 눌러 생성된 바로가기를 활용하세요.</li></ol></div>
+      <li>수정 후 하단에 '저장' 버튼을 눌러 활용하세요.</li></ol></div>
     <div class="qs" id="quick"></div>
     <div class="tools"><input class="search" id="find" placeholder="AI 비서·업무 검색 (예: 학교폭력, 정보공시)" autocomplete="off"></div><div class="sres" id="sres"></div>
     <section class="xsec" id="xsec"></section>
@@ -1155,7 +1155,7 @@ function start(){
 }
 $('#go').onclick = start;
 $('#pclear').onclick = () => setPending(null);
-$('#back').onclick = () => { if (STATE.dirty && !confirm('저장하지 않은 변경 사항이 있습니다. 새 업무분장표를 올릴까요?')) return; closeDrawer(); hidePop(); $('#s2').classList.add('hidden'); $('#s1').classList.remove('hidden'); setPending(null); };
+$('#back').onclick = () => { if (STATE.dirty && !confirm('저장하지 않은 변경 사항이 있습니다. 저장할까요?')) return; closeDrawer(); hidePop(); $('#s2').classList.add('hidden'); $('#s1').classList.remove('hidden'); setPending(null); };
 $('#level').onchange = () => { STATE.agl = null; if (STATE.saved) render(); else recompute(); buildDrawer(); setDirty(true); };
 const drop = $('#drop');
 drop.onclick = () => $('#file').click();
